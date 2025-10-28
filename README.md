@@ -1,23 +1,16 @@
-# Shopping-Cart
-Shop items fetched from FakeStore API
+# React + Vite
 
-## Basic Layout
-Pages: Home Page, Shop Page, Cart Page 
-User can navigate using a navigation bar on shown on all pages. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Home Page
-Text, images, information 
+Currently, two official plugins are available:
 
-## Shop Page
-Individual cards for each product 
-Each card has an input field and user can manually type 
-to see how many they want to buy. 
-Increment and decrement button for fine-tuning. 
-Title for each product and "Add to cart" button
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-*Cart page indicates how many items are in the cart, updated real-time*
+## React Compiler
 
-## Cart Page
-Displays items and quantities 
-Users can increase and decrease quantity of items in cart, and remove items. 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
