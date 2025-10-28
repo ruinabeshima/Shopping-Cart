@@ -4,9 +4,6 @@
   justify-content: space-between; 
   
   padding: 2rem 3rem 2rem 3rem; 
-  box-shadow: 0px 10px 19px -10px rgba(0,0,0,0.71);
--webkit-box-shadow: 0px 10px 19px -10px rgba(0,0,0,0.71);
--moz-box-shadow: 0px 10px 19px -10px rgba(0,0,0,0.71);
 }
 
 .img {
