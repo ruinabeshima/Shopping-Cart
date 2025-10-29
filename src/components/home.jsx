@@ -1,10 +1,11 @@
 import styles from "../styles/homepage.module.css"
+import NavBar from "./navbar";
 
 function Home(){
   return (
-    <div className={styles.homepage}>
-      <p>Hello</p>
-    </div>
+    <>
+      <NavBar />
+    </>
   ); 
 }
 

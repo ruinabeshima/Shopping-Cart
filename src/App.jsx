@@ -1,29 +1,35 @@
 import './App.css'
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import NavBar from './components/navbar';
 import Home from './components/home';
+import Shop from './components/shop.jsx'
+import Cart from "./components/cart.jsx"
 
-const URL = `https://fakestoreapi.com/products`
+const URL = `https://fakestoreapi.com/products/`
 
-function App() {
+function App() {;
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(URL);
       const data = await response.json()
       console.log(data)
+      setData(data)
     }
 
     fetchData(); 
   }, [])
 
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "shop", element: <Shop data={data} />},
+    { path: "cart", element: <Cart data={data} />},
+  ]);
 
   return (
-    <>
-      <NavBar />
-      <Home />      
-    </>
+    <RouterProvider router={router} />
   );
 }
 
