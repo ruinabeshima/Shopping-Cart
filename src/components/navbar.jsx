@@ -1,39 +1,27 @@
 import styles from "../styles/navbar.module.css";
 import icon from "../assets/icon.svg";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-function NavBar(props) {
+function NavBar() {
   return (
+
     <div className={styles.navbar}>
       <div className={styles.imgContainer}>
-        <img
+          <Link to="/">
+                    <img
           src={icon}
           className={styles.img}
-          onClick={(event) => props.handlePage(0, event)}
         ></img>
+          </Link>
       </div>
 
       <div className={styles.linkContainer}>
-        <a
-          className={styles.link}
-          onClick={(event) => props.handlePage(1, event)}
-        >
-          Shop
-        </a>
-        <a
-          className={styles.link}
-          onClick={(event) => props.handlePage(2, event)}
-        >
-          Cart
-        </a>
+        <Link className={styles.link} to="/shop">Shop</Link>
+        <Link className={styles.link} to="/cart">Cart</Link>
         <p className={styles.button}>1</p>
       </div>
     </div>
   );
 }
-
-NavBar.PropTypes = {
-  handlePage: PropTypes.func,
-};
 
 export default NavBar;

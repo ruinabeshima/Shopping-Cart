@@ -3,10 +3,12 @@ My capstone React project
 
 Utilises: 
 - A React + Vue project 
+- React Router for client-side routing 
 - Component-based CSS Styling
-- PropTypes for type checking / debugging 
 - Lucide (icon component library) for icons
 - FakeStore API for shopping items 
+
+**Installed PropType for type debugging but React version too modern to use**
 
 ## Navigation Bar 
 - Navigation between Home, Shop and Cart Pages 

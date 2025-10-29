@@ -1,6 +1,6 @@
 import styles from "../styles/homepage.module.css"
 
-function HomePage(){
+function Home(){
   return (
     <div className={styles.homepage}>
       <p>Hello</p>
@@ -8,5 +8,5 @@ function HomePage(){
   ); 
 }
 
-export default HomePage
+export default Home
 
