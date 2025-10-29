@@ -6,29 +6,55 @@
 }
 
 .title {
-  color: green; 
+  color: green;
+  font-size: 1.5rem;  
 }
 
 .gridContainer {
   height: 100%; 
   display: grid; 
   gap: 3rem; 
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   padding-bottom: 5rem; 
 }
 
 .gridItem {
   border: 1px solid black; 
-  height: 400px; 
+  height: 450px; 
   padding: 1rem; 
   border-radius: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.gridItem:hover {
+  cursor: pointer; 
+  background: rgb(227, 222, 222); 
 }
 
 .itemName {
   font-weight: bold; 
+  height: 5rem; 
+}
+
+.category {
+  width: 100%; 
+  margin: 0; 
+  font-size: 0.75rem; 
+  font-style: italic; 
+  text-align: left; 
 }
 
 .image {
-  height: 5rem; 
-  width: 5rem; 
+  height: 10rem; 
+  width: 10rem; 
+}
+
+.price {
+  width: 100%; 
+  margin: 0; 
+  text-align: left; 
+  font-size: 2rem; 
+  margin-bottom: 1rem; 
 }
