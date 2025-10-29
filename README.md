@@ -4,6 +4,7 @@ My capstone React project
 Utilises: 
 - A React + Vue project 
 - Component-based CSS Styling
+- PropTypes for type checking / debugging 
 - Lucide (icon component library) for icons
 - FakeStore API for shopping items 
 
