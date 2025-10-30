@@ -1,11 +1,15 @@
 import NavBar from "./navbar";
+import ShopModal from "./shopmodal";
 import styles from "../styles/shoppage.module.css"
 import { useState } from "react";
-import { Modal, Box, Typography, Button } from "@mui/material";
 
 function Shop(props){ 
   const [open, setOpen] = useState(false); 
   const [item, setItem] = useState([]);
+
+  const addToCart = (item, quantity) => {
+    console.log(`Ordered ${quantity} of ${item}`)
+  }
 
   const handleOpen= (item) => {
     setOpen(true); 
@@ -32,23 +36,9 @@ function Shop(props){
         </div>
       </div>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box className={styles.modal}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            <p className={styles.modalTitle}>{item.title}</p>
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <p>{item.description}</p>
-          </Typography>
-        </Box>
-
-        <Button variant="contained">Contained</Button>
-      </Modal>
+      {open && (
+        <ShopModal open={open} item={item} handleClose={handleClose}/>
+      )}
 
       
     </>

@@ -18,7 +18,7 @@ function NavBar() {
       <div className={styles.linkContainer}>
         <Link className={styles.link} to="/shop">Shop</Link>
         <Link className={styles.link} to="/cart">Cart</Link>
-        <p className={styles.button}>1</p>
+        <p className={styles.button}>0</p>
       </div>
     </div>
   );
