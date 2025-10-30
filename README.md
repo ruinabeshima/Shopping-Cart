@@ -6,7 +6,8 @@ Utilises:
 - React Router for client-side routing 
 - Component-based CSS Styling
 - Lucide (icon component library) for icons
-- FakeStore API for shopping items 
+- FakeStore API for shopping items
+- Material UI for the modal on Shop Page 
 
 **Installed PropType for type debugging but React version too modern to use**
 

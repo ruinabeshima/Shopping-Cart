@@ -9,7 +9,7 @@ import Cart from "./components/cart.jsx"
 const URL = `https://fakestoreapi.com/products/`
 
 function App() {;
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
