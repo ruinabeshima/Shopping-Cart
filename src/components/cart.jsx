@@ -14,8 +14,8 @@ function Cart(props){
             props.cart.map((cartItem) => (
               <div className={styles.cartItem}>
                 <p>{cartItem.item.title}</p>
-                <p>{cartItem.quantity}</p>
                 <p>${cartItem.item.price * cartItem.quantity}</p>
+                <p>{cartItem.quantity}</p>
               </div>
             ))
           )}
