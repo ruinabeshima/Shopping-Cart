@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './components/home';
@@ -10,6 +10,18 @@ const URL = `https://fakestoreapi.com/products/`
 
 function App() {;
   const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+
+  const handleQuantity = () => {
+    setQuantity(quantity + 1);
+  }
+
+  const addCart = (item, quantity) => {
+    console.log(`${quantity} of ${item.title} was ordered`)
+    setCart([...cart, {item, quantity}] )
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,9 +35,9 @@ function App() {;
   }, [])
 
   const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    { path: "shop", element: <Shop data={data} />},
-    { path: "cart", element: <Cart data={data} />},
+    { path: "/", element: <Home quantity={quantity}/> },
+    { path: "shop", element: <Shop data={data} cart={cart} quantity={quantity} handleQuantity={handleQuantity} addCart={addCart}/>},
+    { path: "cart", element: <Cart data={data} cart={cart} quantity={quantity} handleQuantity={handleQuantity}/>},
   ]);
 
   return (

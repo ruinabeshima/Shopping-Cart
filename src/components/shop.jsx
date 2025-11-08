@@ -7,10 +7,6 @@ function Shop(props){
   const [open, setOpen] = useState(false); 
   const [item, setItem] = useState([]);
 
-  const addToCart = (item, quantity) => {
-    console.log(`Ordered ${quantity} of ${item}`)
-  }
-
   const handleOpen= (item) => {
     setOpen(true); 
     setItem(item)
@@ -20,7 +16,7 @@ function Shop(props){
 
   return (
     <>
-      <NavBar />
+      <NavBar quantity = {props.quantity}/>
 
       <div className={styles.shopContainer}>
         <p className={styles.title}>Shop Items</p>
@@ -37,7 +33,7 @@ function Shop(props){
       </div>
 
       {open && (
-        <ShopModal open={open} item={item} handleClose={handleClose}/>
+        <ShopModal open={open} item={item} handleClose={handleClose} handleQuantity={props.handleQuantity} addCart={props.addCart}/>
       )}
 
       

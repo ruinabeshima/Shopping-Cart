@@ -1,0 +1,26 @@
+.cartContainer {
+  height: auto; 
+  padding-left: 3rem; 
+  padding-right: 3rem; 
+  padding-bottom: 5rem; 
+}
+
+.itemContainer {
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem; 
+}
+
+.title {
+  color: green;
+  font-size: 1.5rem;  
+}
+
+.cartItem {
+  border: 1px solid black; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.15rem; 
+  padding: 1rem; 
+  border-radius: 1rem; 
+}

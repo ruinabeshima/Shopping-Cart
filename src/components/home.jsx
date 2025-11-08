@@ -1,10 +1,10 @@
 import styles from "../styles/homepage.module.css"
 import NavBar from "./navbar";
 
-function Home(){
+function Home(props){
   return (
     <>
-      <NavBar />
+      <NavBar quantity={props.quantity}/>
     </>
   ); 
 }
